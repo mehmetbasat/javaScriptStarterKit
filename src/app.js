@@ -22,16 +22,16 @@ let konutKredileri = ["Konut Kredisi", "Emlak Konut Kredisi", "Kamu Konut Kredis
 
 //console.log("<ul>")
 
-for(let i = 0; i<konutKredileri.length; i++) {
+for (let i = 0; i < konutKredileri.length; i++) {
     //console.log("<li>" +konutKredileri[i]+ "</li>")
 }
 
 //console.log("</ul>")
 
 
-let student = {id:1, name:"basat"}
+let student = { id: 1, name: "basat" }
 
-function save(ogrenci,puan=10) {
+function save(ogrenci, puan = 10) {
     //console.log(ogrenci.name + " : " + puan)
 }
 
@@ -39,12 +39,12 @@ save(student, 100)
 
 let students = ["mehmet", "barış", "merve", "safiye"]
 
-let students2 = [students, {id:1, name:"basat"}, "Ankara", {city:"İstanbul"}]
+let students2 = [students, { id: 1, name: "basat" }, "Ankara", { city: "İstanbul" }]
 
 //console.log(students2)
 
 //rest
-let showProducts = function (id,...products) {
+let showProducts = function (id, ...products) {
     console.log(id)
     console.log(products[0])
 }
@@ -53,7 +53,7 @@ let showProducts = function (id,...products) {
 //showProducts(10, "what", "up", "bitch!") 
 
 //spread = ayrıştırmak
-let points = [1,2,3,4,56,7,8,9,6]
+let points = [1, 2, 3, 4, 56, 7, 8, 9, 6]
 console.log(...points)
 console.log(Math.max(...points))
 console.log(..."ABC", "D", ..."EFG", "H")
@@ -74,11 +74,11 @@ function someFuntion([small1], number) {
 
 someFuntion(populations)
 
-let category = {id:1, name:"içecek"}
+let category = { id: 1, name: "içecek" }
 console.log(category.id)
 console.log(category["name"])
 
-let {id, name} = category
+let { id, name } = category
 
 console.log(id)
 console.log(name)
