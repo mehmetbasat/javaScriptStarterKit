@@ -84,3 +84,20 @@ console.log(id)
 console.log(name)
 
 
+let x = [1,2]
+let y = [5,7]
+let z = [...x,...y]
+console.log(z)
+
+
+let a = [2,4,6]
+let b = [3,5,7]
+
+console.log([...a,...b])
+
+
+let animals = ["kurt", "aslan", "ayı"]
+animals[100] = "kedi"
+console.log(animals)
+
+

@@ -1,60 +1,56 @@
-
-//id, firstName, lastName, city,age, creditCardNumber
 export const users = [
     {
-        id: 1,
-        firstName: "Engin",
-        lastName: "Demiroğ",
-        city:"Ankara",
-        age: 36,
-        creditCardNumber: "123456",
-        type: "customer"
-    },
-    {
-        id: 6,
-        firstName: "Beytullah",
-        lastName: "Zor",
-        city:"Ankara",
-        age: 36,
-        creditCardNumber: "123456",
-        type: "customer"
-    },
-    {
-        id: 2,
-        firstName: "Mustafa",
-        lastName: "Sansar",
-        city: "İstanbul",
-        age: 21,
-        creditCardNumber: "654321",
-        type: "customer"
-    },
-    {
-        id: 3,
-        firstName: "Cansu",
-        lastName: "Değirmen",
-        city: "İstanbul",
-        salary: 8000,
+        id:1,
+        firstName:"Mehmet",
+        lastName:"BASAT",
         age:20,
-        type: "employee"
+        city:"Ankara",
+        creditCardNumber:"123456",
+        type:"customer"
     },
     {
-        id: 4,
-        firstName: "Mücahit",
-        lastName: "Kaya",
-        city: "Bolu",
-        age: 23,
-        salary:17000,
-        type: "employee"
+        id:6,
+        firstName:"Mehti",
+        lastName:"Durmuş",
+        age:40,
+        city:"Ankara",
+        creditCardNumber:"34234234",
+        type:"customer"
     },
     {
-        id: 5,
-        firstName: "Eren",
-        lastName: "Arı",
-        city: "Diyarbakır",
-        age: 20,
-        salary: 15000,
-        type: "employee"
+        id:2,
+        firstName:"Barış",
+        lastName:"BASAT",
+        age:47,
+        city:"Ankara",
+        creditCardNumber:"123456",
+        type:"customer"
+    },
+    {
+        id:3,
+        firstName:"Safiye",
+        lastName:"BASAT",
+        city:"Ankara",
+        age:44,
+        salary:15000,
+        type:"employee"
+    },
+    {
+        id:4,
+        firstName:"Merve",
+        lastName:"BASAT",
+        city:"Ankara",
+        age:18,
+        salary:15000,
+        type:"employee"
+    },
+    {
+        id:5,
+        firstName:"Doğa",
+        lastName:"DÜKMEN",
+        city:"Erzurum",
+        age:20,
+        salary:10000,
+        type:"employee"
     }
 ]
-
-//23.05 Dersteyiz
