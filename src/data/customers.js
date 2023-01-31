@@ -1,0 +1,29 @@
+export const customers = [
+    {
+        id:1,
+        firstName:"Mehmet",
+        lastName:"BASAT",
+        age:20,
+        city:"Ankara",
+        creditCardNumber:"123456",
+        type:"customer"
+    },
+    {
+        id:6,
+        firstName:"Mehti",
+        lastName:"Durmuş",
+        age:40,
+        city:"Ankara",
+        creditCardNumber:"34234234",
+        type:"customer"
+    },
+    {
+        id:2,
+        firstName:"Barış",
+        lastName:"BASAT",
+        age:47,
+        city:"Ankara",
+        creditCardNumber:"123456",
+        type:"customer"
+    } 
+]
