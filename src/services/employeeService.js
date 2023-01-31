@@ -1,34 +1,18 @@
-import DataError from "../models/dataError.js";
+import EmployeeValidate from "../crossCuttingConcerns/validation/employeeValidate.js"
 
 export default class EmployeeService {
     constructor(loggerService) {
         this.employees = []
-        this.errors = []
         this.loggerService = loggerService
+        this.employeeValidate = new EmployeeValidate()
     }
 
-    checkEmployeeValidityForErrors(employee) {
-        let requiredFields = "id firstName lastName city age salary".split(" ")
-        let hasErrors = false
-        for (const field of requiredFields) {
-            if (!employee[field]) {
-                hasErrors = true
-                this.errors.push(new DataError(`Validation Problem. ${field} is required`, employee))
-            }
-        }
-        return hasErrors
-    }
-
-    
-    
 
     add(employee) {
-        if (!this.checkEmployeeValidityForErrors(employee)) {
+        if (this.employeeValidate.checkValidityForErrors(employee) && this.employeeValidate.checkAgeIsANumber(employee)) {
             this.employees.push(employee)
         }
-
         //this.loggerService.log(customer)
-
     }
 
     list() {

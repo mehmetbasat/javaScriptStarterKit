@@ -1,42 +1,17 @@
-import DataError from "../models/dataError.js";
-import { customer } from "../models/customer.js"
-
-
+import CustomerValidate from "../crossCuttingConcerns/validation/customerValidate.js";
 
 export default class CustomerService {
     constructor(loggerService) {
         this.customers = []
         this.loggerService = loggerService
-        this.errors = []
+        this.customerValidate = new CustomerValidate()
     }
 
-
-    checkCustomerValidityForErrors(customer) {
-        let requiredFields = "id firstName lastName age city creditCardNumber".split(" ")
-        let hasErrors = false
-        for (const field of requiredFields) {
-            if (!customer[field]) {
-                hasErrors = true
-                this.errors.push(new DataError(`Validation Problem. ${field} is required`, customer))
-            }
-        }
-
-        if (Number.isNaN(Number.parseInt(+customer.age))) {
-            hasErrors = true
-            this.errors.push(new DataError(`Validation Problem. ${customer.age} is not a number`, customer))
-        }
-
-        return hasErrors
-    }
-
-    
     add(customer) {
-        if (!this.checkCustomerValidityForErrors(customer)) {
+        if (this.customerValidate.checkValidityForErrors(customer) && this.customerValidate.checkAgeIsANumber(customer)) {
             this.customers.push(customer)
         }
-
         //this.loggerService.log(customer)
-
     }
 
     listCustomers() {
